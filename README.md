@@ -26,7 +26,7 @@ A simple Python script to fetch and display current weather information for any 
 
 1. **Clone the repository**:
    ```powershell
-   git clone https://github.com/YOUR_USERNAME/weather.git
+   git clone https://github.com/victorcop/weather.git
    cd weather
    ```
 
