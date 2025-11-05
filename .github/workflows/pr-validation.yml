@@ -1,13 +1,11 @@
-name: CI Tests
+name: PR Validation
 
 on:
-  push:
-    branches: [ main, dev ]
   pull_request:
     branches: [ main, dev ]
 
 jobs:
-  test:
+  validate:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -30,6 +28,13 @@ jobs:
       run: |
         pytest
     
-    - name: Test module import
+    - name: Verify module import
       run: |
-        python -c "from weather.weather import get_weather; print('Module import successful')"
+        python -c "from weather.weather import get_weather; print('✓ Module import successful')"
+    
+    - name: Check code quality (Python 3.12 only)
+      if: matrix.python-version == '3.12'
+      run: |
+        pip install flake8
+        flake8 src/weather --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 src/weather --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
