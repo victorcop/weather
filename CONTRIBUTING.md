@@ -12,12 +12,30 @@ Thank you for considering contributing to this project! 🎉
 - Open an issue describing your suggested feature
 - Explain why it would be useful
 
+### Branching Strategy
+
+We use a **Git Flow** approach:
+
+- **`main`**: Production-ready code (protected)
+- **`dev`**: Integration branch for features (default PR target)
+- **`feature/*`**: New features or enhancements
+- **`bugfix/*`**: Bug fixes
+- **`hotfix/*`**: Urgent fixes for production
+
 ### Pull Requests
 
-1. **Fork the repository** and create your branch from `main`
+1. **Fork the repository** and create your feature branch from `dev`
+
    ```bash
+   git checkout dev
+   git pull origin dev
    git checkout -b feature/your-feature-name
    ```
+
+   **Branch naming conventions:**
+   - Features: `feature/add-temperature-conversion`
+   - Bug fixes: `bugfix/fix-api-error-handling`
+   - Hotfixes: `hotfix/critical-security-patch`
 
 2. **Make your changes**
    - Write clear, commented code
@@ -25,23 +43,38 @@ Thank you for considering contributing to this project! 🎉
    - Add tests if applicable
 
 3. **Test your changes**
+
    ```bash
-   pytest test_weather.py
+   pytest
    ```
 
-4. **Commit your changes**
+4. **Commit your changes** with descriptive messages
+
    ```bash
-   git commit -m "Add: brief description of your changes"
+   git commit -m "Add: temperature conversion feature"
    ```
+
+   **Commit message conventions:**
+   - `Add:` for new features
+   - `Fix:` for bug fixes
+   - `Update:` for improvements
+   - `Refactor:` for code restructuring
+   - `Docs:` for documentation changes
 
 5. **Push to your fork**
+
    ```bash
    git push origin feature/your-feature-name
    ```
 
-6. **Open a Pull Request**
+6. **Open a Pull Request to `dev`** (not `main`)
    - Provide a clear description of the changes
-   - Reference any related issues
+   - Reference any related issues (e.g., "Closes #42")
+   - Ensure all CI checks pass
+   - Wait for code review
+
+7. **After approval**, your PR will be merged into `dev`
+   - Releases to `main` are done periodically from `dev`
 
 ## Code Style
 

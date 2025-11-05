@@ -1,8 +1,9 @@
 # Weather API Module
 
-![Python Tests](https://github.com/YOUR_USERNAME/weather/workflows/Python%20Tests/badge.svg)
-![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![CI Tests](https://github.com/victorcop/weather/actions/workflows/python-test.yml/badge.svg?branch=main)](https://github.com/victorcop/weather/actions/workflows/python-test.yml)
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![GitHub](https://img.shields.io/github/stars/victorcop/weather?style=social)](https://github.com/victorcop/weather)
 
 A simple Python script to fetch and display current weather information for any city using the wttr.in API.
 
@@ -187,7 +188,19 @@ C:/Users/YourUsername/AppData/Local/Microsoft/WindowsApps/python3.13.exe weather
 
 ## Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Contributions are welcome! We use a **Git Flow** branching strategy:
+
+- **`main`** - Production-ready code
+- **`dev`** - Integration branch (target for PRs)
+- **`feature/*`** - New features
+
+**Quick start:**
+1. Fork the repo
+2. Create a feature branch from `dev`: `git checkout -b feature/my-feature`
+3. Make your changes and add tests
+4. Open a PR to `dev` branch
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ## License
 

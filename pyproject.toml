@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "A simple Python module to fetch and display current weather information"
 readme = "README.md"
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "Victor Velasquez", email = "victorcop90@gmail.com"}
 ]
 license = {text = "MIT"}
 requires-python = ">=3.8"
@@ -36,9 +36,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/YOUR_USERNAME/weather"
-Repository = "https://github.com/YOUR_USERNAME/weather"
-Issues = "https://github.com/YOUR_USERNAME/weather/issues"
+Homepage = "https://github.com/victorcop/weather"
+Repository = "https://github.com/victorcop/weather"
+Issues = "https://github.com/victorcop/weather/issues"
 
 [project.scripts]
 weather = "weather.__main__:main"
